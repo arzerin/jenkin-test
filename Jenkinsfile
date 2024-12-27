@@ -12,4 +12,21 @@ pipeline {
       }
     }
   }
+  post {
+	always {
+          echo 'This will always run' 
+        }
+	success {
+          echo 'SUCCESS happend' 
+        }	
+	failure {
+          echo 'Failed' 
+        }
+	unstable {
+          echo 'Unstable' 
+        }
+	changed {
+          echo 'Pipeline Changed' 
+        }
+  } 
 }
